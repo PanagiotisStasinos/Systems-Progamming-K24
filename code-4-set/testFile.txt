@@ -1,4 +1,0 @@
-See the file contents go 
-from client over named pipe
-to server and back!!!  Neat!!
-
