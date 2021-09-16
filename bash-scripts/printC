@@ -1,0 +1,29 @@
+#!/bin/bash
+# Loads this script into an array.
+
+text=( $(cat "$1") )
+
+echo ${text}
+
+echo " "; echo " ";
+
+
+for element in $(seq 0 $((${#text[@]} - 1)))
+do
+	echo -n "${text[$element]}"; echo -n "#" 
+done
+
+echo " "; echo " ";
+
+for ((i=0; i <= ${#text[@]} - 1; i++))
+do
+	echo -n "${text[$i]}"; echo -n "!!" 
+done
+
+echo " "; echo " ";
+
+for i in `cat "${1}"`
+do
+	echo -n "${i}"; echo -n "." 
+done
+echo " "

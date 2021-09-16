@@ -1,0 +1,19 @@
+#!/bin/bash
+
+OUTFILE=files.lst
+
+dirName=${1-`pwd`}  	# To - dhlwnei default timh 
+			# An den dw8ei onoma katalogou apo xrhsth
+echo "The name of the directory to work in:  ${dirName}"
+
+echo "Regular files in directory ${dirName}" > $OUTFILE
+
+# -type f means regular files
+for file in "$( find $dirName -type f )"
+do
+  echo "$file"
+done | sort >> "$OUTFILE"
+#      ^^^^^^^^^^^^^^^^^^
+# Anakateu8ynsh ta3inomhmenou stdout
+
+

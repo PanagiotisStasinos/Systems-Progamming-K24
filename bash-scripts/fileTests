@@ -1,0 +1,13 @@
+#!/bin/bash    
+
+if [ -e $1 ]    # exists file
+  then if [ -f $1 ] # is a regular file
+         then echo Regular File
+       fi
+fi
+# Omoia, to -d elegxei an prokeitai gia katalogo
+
+if [ -r $1 ]    # have read rights
+   then echo I can read this file!!!
+fi
+# Omoia to -w kai -x

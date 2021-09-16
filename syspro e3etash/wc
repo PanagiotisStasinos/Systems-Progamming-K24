@@ -1,0 +1,6 @@
+awk
+Makefile
+process_mutex_deadlock.c
+test16_4.c
+test17_6.c
+wc

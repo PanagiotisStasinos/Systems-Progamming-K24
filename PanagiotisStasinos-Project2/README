@@ -1,0 +1,30 @@
+AM : 1115201400191
+Panagiotis Stasinos
+
+arguments in server.c
+./server my_id other_client_id common_dir input_dir buffer_size
+
+arguments in receiver.c
+./receiver my_id other_client_id common_dir mirror_dir buffer_size log_file
+
+arguments in deleter.c
+./deleter my_id mirror_dir other_client_id
+
+format logfile:
+receiver_id	sender_id	file_path	file_size
+
+to utils periexei sunarthseis gia ton client (father process), periexei kai ulopoihsh
+listas h opoia krataei ta id twn allwn client pou einai energoi
+me thn vohtheia auths ths listas elegxetai poios client termatise kai dhmiourgeitai paidi to
+opoio ektelei to deleter
+
+o client dhmiourgei 2 child processes pou ekteloun ta server kai receiver
+Sthn epikoinwnia tou sender kai tou receiver xrhsimopoieitai kai ena parapanw fifo
+meso tou opoiou o receiver stelnei ston sender gia epivevaiwsh oti diavase swsta auta pou tou eixan stalthei
+
+to utils_sender periexei mia ulopoihsh listas sthn opoia apothikeuontai ola ta files to input dir me oloklhro
+to path tous ( diavazei kai ta sub dirs )
+
+
+DEN EXOUN YLOPOIHTHEI
+To 4b vii, dhladh ta paidia den stelnoun signals ston patera gia bad termination
