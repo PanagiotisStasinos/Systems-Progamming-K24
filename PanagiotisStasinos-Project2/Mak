@@ -1,8 +1,0 @@
-all: 	\
-	test
-
-test : test.cpp utils.cpp
-	gcc -o test main.c test.c
-
-clean :
-	rm -f *.o test
